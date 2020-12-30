@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Servicios/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ServicioReporte" targetNamespace="http://Servicios/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:13526/WebServiceArriendoTemporada/ServicioReporte?xsd=1" namespace="http://Servicios/" />
+    </xsd:schema>
+  </types>
+  <message name="getReporteM">
+    <part name="parameters" element="tns:getReporteM" />
+  </message>
+  <message name="getReporteMResponse">
+    <part name="parameters" element="tns:getReporteMResponse" />
+  </message>
+  <message name="reporteGananciaZona">
+    <part name="parameters" element="tns:reporteGananciaZona" />
+  </message>
+  <message name="reporteGananciaZonaResponse">
+    <part name="parameters" element="tns:reporteGananciaZonaResponse" />
+  </message>
+  <message name="getReporteGananciaMensual">
+    <part name="parameters" element="tns:getReporteGananciaMensual" />
+  </message>
+  <message name="getReporteGananciaMensualResponse">
+    <part name="parameters" element="tns:getReporteGananciaMensualResponse" />
+  </message>
+  <message name="reporteGananciaMensualZona">
+    <part name="parameters" element="tns:reporteGananciaMensualZona" />
+  </message>
+  <message name="reporteGananciaMensualZonaResponse">
+    <part name="parameters" element="tns:reporteGananciaMensualZonaResponse" />
+  </message>
+  <message name="getReporteGanancia">
+    <part name="parameters" element="tns:getReporteGanancia" />
+  </message>
+  <message name="getReporteGananciaResponse">
+    <part name="parameters" element="tns:getReporteGananciaResponse" />
+  </message>
+  <message name="reporteGananciaDiaria">
+    <part name="parameters" element="tns:reporteGananciaDiaria" />
+  </message>
+  <message name="reporteGananciaDiariaResponse">
+    <part name="parameters" element="tns:reporteGananciaDiariaResponse" />
+  </message>
+  <message name="reporteGananciaDiariaZona">
+    <part name="parameters" element="tns:reporteGananciaDiariaZona" />
+  </message>
+  <message name="reporteGananciaDiariaZonaResponse">
+    <part name="parameters" element="tns:reporteGananciaDiariaZonaResponse" />
+  </message>
+  <portType name="ServicioReporte">
+    <operation name="getReporteM">
+      <input wsam:Action="http://Servicios/ServicioReporte/getReporteMRequest" message="tns:getReporteM" />
+      <output wsam:Action="http://Servicios/ServicioReporte/getReporteMResponse" message="tns:getReporteMResponse" />
+    </operation>
+    <operation name="reporteGananciaZona">
+      <input wsam:Action="http://Servicios/ServicioReporte/reporteGananciaZonaRequest" message="tns:reporteGananciaZona" />
+      <output wsam:Action="http://Servicios/ServicioReporte/reporteGananciaZonaResponse" message="tns:reporteGananciaZonaResponse" />
+    </operation>
+    <operation name="getReporteGananciaMensual">
+      <input wsam:Action="http://Servicios/ServicioReporte/getReporteGananciaMensualRequest" message="tns:getReporteGananciaMensual" />
+      <output wsam:Action="http://Servicios/ServicioReporte/getReporteGananciaMensualResponse" message="tns:getReporteGananciaMensualResponse" />
+    </operation>
+    <operation name="reporteGananciaMensualZona">
+      <input wsam:Action="http://Servicios/ServicioReporte/reporteGananciaMensualZonaRequest" message="tns:reporteGananciaMensualZona" />
+      <output wsam:Action="http://Servicios/ServicioReporte/reporteGananciaMensualZonaResponse" message="tns:reporteGananciaMensualZonaResponse" />
+    </operation>
+    <operation name="getReporteGanancia">
+      <input wsam:Action="http://Servicios/ServicioReporte/getReporteGananciaRequest" message="tns:getReporteGanancia" />
+      <output wsam:Action="http://Servicios/ServicioReporte/getReporteGananciaResponse" message="tns:getReporteGananciaResponse" />
+    </operation>
+    <operation name="reporteGananciaDiaria">
+      <input wsam:Action="http://Servicios/ServicioReporte/reporteGananciaDiariaRequest" message="tns:reporteGananciaDiaria" />
+      <output wsam:Action="http://Servicios/ServicioReporte/reporteGananciaDiariaResponse" message="tns:reporteGananciaDiariaResponse" />
+    </operation>
+    <operation name="reporteGananciaDiariaZona">
+      <input wsam:Action="http://Servicios/ServicioReporte/reporteGananciaDiariaZonaRequest" message="tns:reporteGananciaDiariaZona" />
+      <output wsam:Action="http://Servicios/ServicioReporte/reporteGananciaDiariaZonaResponse" message="tns:reporteGananciaDiariaZonaResponse" />
+    </operation>
+  </portType>
+  <binding name="ServicioReportePortBinding" type="tns:ServicioReporte">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getReporteM">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="reporteGananciaZona">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getReporteGananciaMensual">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="reporteGananciaMensualZona">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getReporteGanancia">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="reporteGananciaDiaria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="reporteGananciaDiariaZona">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ServicioReporte">
+    <port name="ServicioReportePort" binding="tns:ServicioReportePortBinding">
+      <soap:address location="http://localhost:13526/WebServiceArriendoTemporada/ServicioReporte" />
+    </port>
+  </service>
+</definitions>

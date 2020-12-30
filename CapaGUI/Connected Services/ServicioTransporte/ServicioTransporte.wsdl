@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Servicios/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ServicioTransporte" targetNamespace="http://Servicios/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:13526/WebServiceArriendoTemporada/ServicioTransporte?xsd=1" namespace="http://Servicios/" />
+    </xsd:schema>
+  </types>
+  <message name="actualizarTransporte">
+    <part name="parameters" element="tns:actualizarTransporte" />
+  </message>
+  <message name="actualizarTransporteResponse">
+    <part name="parameters" element="tns:actualizarTransporteResponse" />
+  </message>
+  <message name="insertReservaService">
+    <part name="parameters" element="tns:insertReservaService" />
+  </message>
+  <message name="insertReservaServiceResponse">
+    <part name="parameters" element="tns:insertReservaServiceResponse" />
+  </message>
+  <message name="IngresoTransporte">
+    <part name="parameters" element="tns:IngresoTransporte" />
+  </message>
+  <message name="IngresoTransporteResponse">
+    <part name="parameters" element="tns:IngresoTransporteResponse" />
+  </message>
+  <message name="eliminarTransporte">
+    <part name="parameters" element="tns:eliminarTransporte" />
+  </message>
+  <message name="eliminarTransporteResponse">
+    <part name="parameters" element="tns:eliminarTransporteResponse" />
+  </message>
+  <message name="listarTransporte">
+    <part name="parameters" element="tns:listarTransporte" />
+  </message>
+  <message name="listarTransporteResponse">
+    <part name="parameters" element="tns:listarTransporteResponse" />
+  </message>
+  <portType name="ServicioTransporte">
+    <operation name="actualizarTransporte">
+      <input wsam:Action="http://Servicios/ServicioTransporte/actualizarTransporteRequest" message="tns:actualizarTransporte" />
+      <output wsam:Action="http://Servicios/ServicioTransporte/actualizarTransporteResponse" message="tns:actualizarTransporteResponse" />
+    </operation>
+    <operation name="insertReservaService">
+      <input wsam:Action="http://Servicios/ServicioTransporte/insertReservaServiceRequest" message="tns:insertReservaService" />
+      <output wsam:Action="http://Servicios/ServicioTransporte/insertReservaServiceResponse" message="tns:insertReservaServiceResponse" />
+    </operation>
+    <operation name="IngresoTransporte">
+      <input wsam:Action="http://Servicios/ServicioTransporte/IngresoTransporteRequest" message="tns:IngresoTransporte" />
+      <output wsam:Action="http://Servicios/ServicioTransporte/IngresoTransporteResponse" message="tns:IngresoTransporteResponse" />
+    </operation>
+    <operation name="eliminarTransporte">
+      <input wsam:Action="http://Servicios/ServicioTransporte/eliminarTransporteRequest" message="tns:eliminarTransporte" />
+      <output wsam:Action="http://Servicios/ServicioTransporte/eliminarTransporteResponse" message="tns:eliminarTransporteResponse" />
+    </operation>
+    <operation name="listarTransporte">
+      <input wsam:Action="http://Servicios/ServicioTransporte/listarTransporteRequest" message="tns:listarTransporte" />
+      <output wsam:Action="http://Servicios/ServicioTransporte/listarTransporteResponse" message="tns:listarTransporteResponse" />
+    </operation>
+  </portType>
+  <binding name="ServicioTransportePortBinding" type="tns:ServicioTransporte">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="actualizarTransporte">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertReservaService">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="IngresoTransporte">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarTransporte">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTransporte">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ServicioTransporte">
+    <port name="ServicioTransportePort" binding="tns:ServicioTransportePortBinding">
+      <soap:address location="http://localhost:13526/WebServiceArriendoTemporada/ServicioTransporte" />
+    </port>
+  </service>
+</definitions>

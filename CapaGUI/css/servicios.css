@@ -1,0 +1,48 @@
+﻿.container-service {
+    display: flex;
+    min-height: 300px;
+    justify-content: space-between;
+}
+
+.img-service {
+    display: flex;
+    justify-content: space-between;
+    width: 580px;
+    height: 300px;
+}
+
+#turismo {
+    background: url('../Image/turismo.jpg');
+    background-size: cover;
+}
+
+#transporte {
+    background-image: url('../Image/transporte.jpg');
+    background-size: cover;
+}
+
+.absoluto {
+    background-color: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.absoluto-font {
+    color: #FFFFFF
+}
+
+@media only screen and (max-width: 1280px) {
+    .container-service {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #turismo {
+        margin-top: 10px
+    }
+}

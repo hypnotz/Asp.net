@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Servicios/" targetNamespace="http://Servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="calculoPago" type="tns:calculoPago" />
+  <xs:element name="calculoPagoResponse" type="tns:calculoPagoResponse" />
+  <xs:complexType name="calculoPago">
+    <xs:sequence>
+      <xs:element name="idDepto" type="xs:int" />
+      <xs:element minOccurs="0" name="fecha_ini" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha_fin" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="calculoPagoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Servicios/" targetNamespace="http://Servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ActualizarUsuario" type="tns:ActualizarUsuario" />
+  <xs:element name="ActualizarUsuarioResponse" type="tns:ActualizarUsuarioResponse" />
+  <xs:element name="EliminarClienteUsuario" type="tns:EliminarClienteUsuario" />
+  <xs:element name="EliminarClienteUsuarioResponse" type="tns:EliminarClienteUsuarioResponse" />
+  <xs:element name="autenticarUsuario" type="tns:autenticarUsuario" />
+  <xs:element name="autenticarUsuarioResponse" type="tns:autenticarUsuarioResponse" />
+  <xs:element name="ingresarUsuario" type="tns:ingresarUsuario" />
+  <xs:element name="ingresarUsuario2" type="tns:ingresarUsuario2" />
+  <xs:element name="ingresarUsuario2Response" type="tns:ingresarUsuario2Response" />
+  <xs:element name="ingresarUsuarioResponse" type="tns:ingresarUsuarioResponse" />
+  <xs:complexType name="ActualizarUsuario">
+    <xs:sequence>
+      <xs:element name="V_ID_USUARIO" type="xs:int" />
+      <xs:element minOccurs="0" name="V_NOMBRE_USUARIO" type="xs:string" />
+      <xs:element minOccurs="0" name="V_CONTRASENA" type="xs:string" />
+      <xs:element name="V_ID_PRIVILEGIO" type="xs:int" />
+      <xs:element name="V_ID_ESTADO" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActualizarUsuarioResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="autenticarUsuario">
+    <xs:sequence>
+      <xs:element name="V_ID_USUARIO" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="autenticarUsuarioResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="EliminarClienteUsuario">
+    <xs:sequence>
+      <xs:element name="idUsuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarClienteUsuarioResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ingresarUsuario2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="V_RUT" type="xs:string" />
+      <xs:element minOccurs="0" name="V_NOMBRES" type="xs:string" />
+      <xs:element minOccurs="0" name="V_APELLIDO_PATERNO" type="xs:string" />
+      <xs:element minOccurs="0" name="V_APELLIDO_MATERNO" type="xs:string" />
+      <xs:element minOccurs="0" name="V_CORREO" type="xs:string" />
+      <xs:element minOccurs="0" name="V_FECHA_NACIMIENTO" type="xs:string" />
+      <xs:element name="V_TELEFONO" type="xs:int" />
+      <xs:element minOccurs="0" name="V_NOMBRE_USUARIO" type="xs:string" />
+      <xs:element minOccurs="0" name="V_CONTRASENA" type="xs:string" />
+      <xs:element name="V_ID_PRIVILEGIO" type="xs:int" />
+      <xs:element name="V_ID_ESTADO" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ingresarUsuario2Response">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ingresarUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombreUsuario" type="xs:string" />
+      <xs:element minOccurs="0" name="contrasena" type="xs:string" />
+      <xs:element name="id_Privilegio" type="xs:int" />
+      <xs:element name="id_Estado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ingresarUsuarioResponse">
+    <xs:sequence />
+  </xs:complexType>
+</xs:schema>

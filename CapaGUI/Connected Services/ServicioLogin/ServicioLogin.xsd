@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Servicios/" targetNamespace="http://Servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="getCorreo" type="tns:getCorreo" />
+  <xs:element name="getCorreoResponse" type="tns:getCorreoResponse" />
+  <xs:element name="getIdByName" type="tns:getIdByName" />
+  <xs:element name="getIdByNameResponse" type="tns:getIdByNameResponse" />
+  <xs:element name="getIdByUserName" type="tns:getIdByUserName" />
+  <xs:element name="getIdByUserNameResponse" type="tns:getIdByUserNameResponse" />
+  <xs:element name="getidByUserID" type="tns:getidByUserID" />
+  <xs:element name="getidByUserIDResponse" type="tns:getidByUserIDResponse" />
+  <xs:element name="login" type="tns:login" />
+  <xs:element name="loginResponse" type="tns:loginResponse" />
+  <xs:element name="validarUsernameExists" type="tns:validarUsernameExists" />
+  <xs:element name="validarUsernameExistsResponse" type="tns:validarUsernameExistsResponse" />
+  <xs:complexType name="getidByUserID">
+    <xs:sequence>
+      <xs:element name="idUsuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getidByUserIDResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCorreo">
+    <xs:sequence>
+      <xs:element name="usuarito" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCorreoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="validarUsernameExists">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="user" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="validarUsernameExistsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="login">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="usuarito" type="xs:string" />
+      <xs:element minOccurs="0" name="contrasena" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="loginResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getIdByName">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="usuarito" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getIdByNameResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getIdByUserName">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="usuarito" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getIdByUserNameResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

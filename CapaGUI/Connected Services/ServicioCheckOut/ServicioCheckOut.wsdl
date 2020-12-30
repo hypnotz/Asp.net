@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Servicios/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ServicioCheckOut" targetNamespace="http://Servicios/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:13526/WebServiceArriendoTemporada/ServicioCheckOut?xsd=1" namespace="http://Servicios/" />
+    </xsd:schema>
+  </types>
+  <message name="insertarDetalleMulta">
+    <part name="parameters" element="tns:insertarDetalleMulta" />
+  </message>
+  <message name="insertarDetalleMultaResponse">
+    <part name="parameters" element="tns:insertarDetalleMultaResponse" />
+  </message>
+  <message name="insertarCheckOutMulta">
+    <part name="parameters" element="tns:insertarCheckOutMulta" />
+  </message>
+  <message name="insertarCheckOutMultaResponse">
+    <part name="parameters" element="tns:insertarCheckOutMultaResponse" />
+  </message>
+  <message name="insertarCheckOutMulta2">
+    <part name="parameters" element="tns:insertarCheckOutMulta2" />
+  </message>
+  <message name="insertarCheckOutMulta2Response">
+    <part name="parameters" element="tns:insertarCheckOutMulta2Response" />
+  </message>
+  <message name="insertarCheckOut">
+    <part name="parameters" element="tns:insertarCheckOut" />
+  </message>
+  <message name="insertarCheckOutResponse">
+    <part name="parameters" element="tns:insertarCheckOutResponse" />
+  </message>
+  <message name="getLastID">
+    <part name="parameters" element="tns:getLastID" />
+  </message>
+  <message name="getLastIDResponse">
+    <part name="parameters" element="tns:getLastIDResponse" />
+  </message>
+  <portType name="ServicioCheckOut">
+    <operation name="insertarDetalleMulta">
+      <input wsam:Action="http://Servicios/ServicioCheckOut/insertarDetalleMultaRequest" message="tns:insertarDetalleMulta" />
+      <output wsam:Action="http://Servicios/ServicioCheckOut/insertarDetalleMultaResponse" message="tns:insertarDetalleMultaResponse" />
+    </operation>
+    <operation name="insertarCheckOutMulta">
+      <input wsam:Action="http://Servicios/ServicioCheckOut/insertarCheckOutMultaRequest" message="tns:insertarCheckOutMulta" />
+      <output wsam:Action="http://Servicios/ServicioCheckOut/insertarCheckOutMultaResponse" message="tns:insertarCheckOutMultaResponse" />
+    </operation>
+    <operation name="insertarCheckOutMulta2">
+      <input wsam:Action="http://Servicios/ServicioCheckOut/insertarCheckOutMulta2Request" message="tns:insertarCheckOutMulta2" />
+      <output wsam:Action="http://Servicios/ServicioCheckOut/insertarCheckOutMulta2Response" message="tns:insertarCheckOutMulta2Response" />
+    </operation>
+    <operation name="insertarCheckOut">
+      <input wsam:Action="http://Servicios/ServicioCheckOut/insertarCheckOutRequest" message="tns:insertarCheckOut" />
+      <output wsam:Action="http://Servicios/ServicioCheckOut/insertarCheckOutResponse" message="tns:insertarCheckOutResponse" />
+    </operation>
+    <operation name="getLastID">
+      <input wsam:Action="http://Servicios/ServicioCheckOut/getLastIDRequest" message="tns:getLastID" />
+      <output wsam:Action="http://Servicios/ServicioCheckOut/getLastIDResponse" message="tns:getLastIDResponse" />
+    </operation>
+  </portType>
+  <binding name="ServicioCheckOutPortBinding" type="tns:ServicioCheckOut">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="insertarDetalleMulta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarCheckOutMulta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarCheckOutMulta2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarCheckOut">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getLastID">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ServicioCheckOut">
+    <port name="ServicioCheckOutPort" binding="tns:ServicioCheckOutPortBinding">
+      <soap:address location="http://localhost:13526/WebServiceArriendoTemporada/ServicioCheckOut" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Servicios/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ServicioReserva" targetNamespace="http://Servicios/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:13526/WebServiceArriendoTemporada/ServicioReserva?xsd=1" namespace="http://Servicios/" />
+    </xsd:schema>
+  </types>
+  <message name="reservaUsuario2">
+    <part name="parameters" element="tns:reservaUsuario2" />
+  </message>
+  <message name="reservaUsuario2Response">
+    <part name="parameters" element="tns:reservaUsuario2Response" />
+  </message>
+  <message name="consultaReservas">
+    <part name="parameters" element="tns:consultaReservas" />
+  </message>
+  <message name="consultaReservasResponse">
+    <part name="parameters" element="tns:consultaReservasResponse" />
+  </message>
+  <message name="listarReserva">
+    <part name="parameters" element="tns:listarReserva" />
+  </message>
+  <message name="listarReservaResponse">
+    <part name="parameters" element="tns:listarReservaResponse" />
+  </message>
+  <message name="insertReserva">
+    <part name="parameters" element="tns:insertReserva" />
+  </message>
+  <message name="insertReservaResponse">
+    <part name="parameters" element="tns:insertReservaResponse" />
+  </message>
+  <message name="GetTurismoByReserva">
+    <part name="parameters" element="tns:GetTurismoByReserva" />
+  </message>
+  <message name="GetTurismoByReservaResponse">
+    <part name="parameters" element="tns:GetTurismoByReservaResponse" />
+  </message>
+  <message name="consultaReservasOut">
+    <part name="parameters" element="tns:consultaReservasOut" />
+  </message>
+  <message name="consultaReservasOutResponse">
+    <part name="parameters" element="tns:consultaReservasOutResponse" />
+  </message>
+  <message name="GetTransporteByReserva">
+    <part name="parameters" element="tns:GetTransporteByReserva" />
+  </message>
+  <message name="GetTransporteByReservaResponse">
+    <part name="parameters" element="tns:GetTransporteByReservaResponse" />
+  </message>
+  <message name="GetAcompaniantesByReserva">
+    <part name="parameters" element="tns:GetAcompaniantesByReserva" />
+  </message>
+  <message name="GetAcompaniantesByReservaResponse">
+    <part name="parameters" element="tns:GetAcompaniantesByReservaResponse" />
+  </message>
+  <message name="validarFechaReserva">
+    <part name="parameters" element="tns:validarFechaReserva" />
+  </message>
+  <message name="validarFechaReservaResponse">
+    <part name="parameters" element="tns:validarFechaReservaResponse" />
+  </message>
+  <portType name="ServicioReserva">
+    <operation name="reservaUsuario2">
+      <input wsam:Action="http://Servicios/ServicioReserva/reservaUsuario2Request" message="tns:reservaUsuario2" />
+      <output wsam:Action="http://Servicios/ServicioReserva/reservaUsuario2Response" message="tns:reservaUsuario2Response" />
+    </operation>
+    <operation name="consultaReservas">
+      <input wsam:Action="http://Servicios/ServicioReserva/consultaReservasRequest" message="tns:consultaReservas" />
+      <output wsam:Action="http://Servicios/ServicioReserva/consultaReservasResponse" message="tns:consultaReservasResponse" />
+    </operation>
+    <operation name="listarReserva">
+      <input wsam:Action="http://Servicios/ServicioReserva/listarReservaRequest" message="tns:listarReserva" />
+      <output wsam:Action="http://Servicios/ServicioReserva/listarReservaResponse" message="tns:listarReservaResponse" />
+    </operation>
+    <operation name="insertReserva">
+      <input wsam:Action="http://Servicios/ServicioReserva/insertReservaRequest" message="tns:insertReserva" />
+      <output wsam:Action="http://Servicios/ServicioReserva/insertReservaResponse" message="tns:insertReservaResponse" />
+    </operation>
+    <operation name="GetTurismoByReserva">
+      <input wsam:Action="http://Servicios/ServicioReserva/GetTurismoByReservaRequest" message="tns:GetTurismoByReserva" />
+      <output wsam:Action="http://Servicios/ServicioReserva/GetTurismoByReservaResponse" message="tns:GetTurismoByReservaResponse" />
+    </operation>
+    <operation name="consultaReservasOut">
+      <input wsam:Action="http://Servicios/ServicioReserva/consultaReservasOutRequest" message="tns:consultaReservasOut" />
+      <output wsam:Action="http://Servicios/ServicioReserva/consultaReservasOutResponse" message="tns:consultaReservasOutResponse" />
+    </operation>
+    <operation name="GetTransporteByReserva">
+      <input wsam:Action="http://Servicios/ServicioReserva/GetTransporteByReservaRequest" message="tns:GetTransporteByReserva" />
+      <output wsam:Action="http://Servicios/ServicioReserva/GetTransporteByReservaResponse" message="tns:GetTransporteByReservaResponse" />
+    </operation>
+    <operation name="GetAcompaniantesByReserva">
+      <input wsam:Action="http://Servicios/ServicioReserva/GetAcompaniantesByReservaRequest" message="tns:GetAcompaniantesByReserva" />
+      <output wsam:Action="http://Servicios/ServicioReserva/GetAcompaniantesByReservaResponse" message="tns:GetAcompaniantesByReservaResponse" />
+    </operation>
+    <operation name="validarFechaReserva">
+      <input wsam:Action="http://Servicios/ServicioReserva/validarFechaReservaRequest" message="tns:validarFechaReserva" />
+      <output wsam:Action="http://Servicios/ServicioReserva/validarFechaReservaResponse" message="tns:validarFechaReservaResponse" />
+    </operation>
+  </portType>
+  <binding name="ServicioReservaPortBinding" type="tns:ServicioReserva">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="reservaUsuario2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="consultaReservas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarReserva">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertReserva">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetTurismoByReserva">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="consultaReservasOut">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetTransporteByReserva">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetAcompaniantesByReserva">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="validarFechaReserva">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ServicioReserva">
+    <port name="ServicioReservaPort" binding="tns:ServicioReservaPortBinding">
+      <soap:address location="http://localhost:13526/WebServiceArriendoTemporada/ServicioReserva" />
+    </port>
+  </service>
+</definitions>

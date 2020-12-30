@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Servicios/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ServicioLogin" targetNamespace="http://Servicios/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:13526/WebServiceArriendoTemporada/ServicioLogin?xsd=1" namespace="http://Servicios/" />
+    </xsd:schema>
+  </types>
+  <message name="getidByUserID">
+    <part name="parameters" element="tns:getidByUserID" />
+  </message>
+  <message name="getidByUserIDResponse">
+    <part name="parameters" element="tns:getidByUserIDResponse" />
+  </message>
+  <message name="getIdByUserName">
+    <part name="parameters" element="tns:getIdByUserName" />
+  </message>
+  <message name="getIdByUserNameResponse">
+    <part name="parameters" element="tns:getIdByUserNameResponse" />
+  </message>
+  <message name="getIdByName">
+    <part name="parameters" element="tns:getIdByName" />
+  </message>
+  <message name="getIdByNameResponse">
+    <part name="parameters" element="tns:getIdByNameResponse" />
+  </message>
+  <message name="getCorreo">
+    <part name="parameters" element="tns:getCorreo" />
+  </message>
+  <message name="getCorreoResponse">
+    <part name="parameters" element="tns:getCorreoResponse" />
+  </message>
+  <message name="login">
+    <part name="parameters" element="tns:login" />
+  </message>
+  <message name="loginResponse">
+    <part name="parameters" element="tns:loginResponse" />
+  </message>
+  <message name="validarUsernameExists">
+    <part name="parameters" element="tns:validarUsernameExists" />
+  </message>
+  <message name="validarUsernameExistsResponse">
+    <part name="parameters" element="tns:validarUsernameExistsResponse" />
+  </message>
+  <portType name="ServicioLogin">
+    <operation name="getidByUserID">
+      <input wsam:Action="http://Servicios/ServicioLogin/getidByUserIDRequest" message="tns:getidByUserID" />
+      <output wsam:Action="http://Servicios/ServicioLogin/getidByUserIDResponse" message="tns:getidByUserIDResponse" />
+    </operation>
+    <operation name="getIdByUserName">
+      <input wsam:Action="http://Servicios/ServicioLogin/getIdByUserNameRequest" message="tns:getIdByUserName" />
+      <output wsam:Action="http://Servicios/ServicioLogin/getIdByUserNameResponse" message="tns:getIdByUserNameResponse" />
+    </operation>
+    <operation name="getIdByName">
+      <input wsam:Action="http://Servicios/ServicioLogin/getIdByNameRequest" message="tns:getIdByName" />
+      <output wsam:Action="http://Servicios/ServicioLogin/getIdByNameResponse" message="tns:getIdByNameResponse" />
+    </operation>
+    <operation name="getCorreo">
+      <input wsam:Action="http://Servicios/ServicioLogin/getCorreoRequest" message="tns:getCorreo" />
+      <output wsam:Action="http://Servicios/ServicioLogin/getCorreoResponse" message="tns:getCorreoResponse" />
+    </operation>
+    <operation name="login">
+      <input wsam:Action="http://Servicios/ServicioLogin/loginRequest" message="tns:login" />
+      <output wsam:Action="http://Servicios/ServicioLogin/loginResponse" message="tns:loginResponse" />
+    </operation>
+    <operation name="validarUsernameExists">
+      <input wsam:Action="http://Servicios/ServicioLogin/validarUsernameExistsRequest" message="tns:validarUsernameExists" />
+      <output wsam:Action="http://Servicios/ServicioLogin/validarUsernameExistsResponse" message="tns:validarUsernameExistsResponse" />
+    </operation>
+  </portType>
+  <binding name="ServicioLoginPortBinding" type="tns:ServicioLogin">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getidByUserID">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getIdByUserName">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getIdByName">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getCorreo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="login">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="validarUsernameExists">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ServicioLogin">
+    <port name="ServicioLoginPort" binding="tns:ServicioLoginPortBinding">
+      <soap:address location="http://localhost:13526/WebServiceArriendoTemporada/ServicioLogin" />
+    </port>
+  </service>
+</definitions>

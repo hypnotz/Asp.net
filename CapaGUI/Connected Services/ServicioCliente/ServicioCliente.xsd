@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Servicios/" targetNamespace="http://Servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ListarCliente" type="tns:ListarCliente" />
+  <xs:element name="ListarClienteResponse" type="tns:ListarClienteResponse" />
+  <xs:element name="ListarClienteUsuario" type="tns:ListarClienteUsuario" />
+  <xs:element name="ListarClienteUsuarioDeshabilitado" type="tns:ListarClienteUsuarioDeshabilitado" />
+  <xs:element name="ListarClienteUsuarioDeshabilitadoResponse" type="tns:ListarClienteUsuarioDeshabilitadoResponse" />
+  <xs:element name="ListarClienteUsuarioResponse" type="tns:ListarClienteUsuarioResponse" />
+  <xs:element name="getClienteById" type="tns:getClienteById" />
+  <xs:element name="getClienteByIdResponse" type="tns:getClienteByIdResponse" />
+  <xs:element name="getClienteByRut" type="tns:getClienteByRut" />
+  <xs:element name="getClienteByRutResponse" type="tns:getClienteByRutResponse" />
+  <xs:element name="loguearseByUsuario" type="tns:loguearseByUsuario" />
+  <xs:element name="loguearseByUsuarioResponse" type="tns:loguearseByUsuarioResponse" />
+  <xs:element name="updateUsuarioCliente" type="tns:updateUsuarioCliente" />
+  <xs:element name="updateUsuarioClienteResponse" type="tns:updateUsuarioClienteResponse" />
+  <xs:complexType name="ListarCliente">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListarClienteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellidoMaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaNacimiento" type="xs:string" />
+      <xs:element name="idCliente" type="xs:int" />
+      <xs:element name="idUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="nombres" type="xs:string" />
+      <xs:element minOccurs="0" name="rut" type="xs:string" />
+      <xs:element name="telefono" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarClienteUsuario">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListarClienteUsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:clienteUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="clienteUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellidoMaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaNacimiento" type="xs:string" />
+      <xs:element name="idPrivilegio" type="xs:int" />
+      <xs:element name="idUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreUsuario" type="xs:string" />
+      <xs:element minOccurs="0" name="nombres" type="xs:string" />
+      <xs:element minOccurs="0" name="rut" type="xs:string" />
+      <xs:element name="telefono" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="loguearseByUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="usuarito" type="xs:string" />
+      <xs:element minOccurs="0" name="contrasena" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="loguearseByUsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateUsuarioCliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Rut" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombres" type="xs:string" />
+      <xs:element minOccurs="0" name="ApellidoPaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="ApellidoMaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="Correo" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaNacimiento" type="xs:string" />
+      <xs:element name="fono" type="xs:int" />
+      <xs:element minOccurs="0" name="NombreUsuario" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" type="xs:string" />
+      <xs:element name="idUsuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateUsuarioClienteResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getClienteById">
+    <xs:sequence>
+      <xs:element name="idUsuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getClienteByIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:clienteDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="clienteDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellidoMaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="contrasena" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaNacimiento" type="xs:string" />
+      <xs:element name="idCliente" type="xs:int" />
+      <xs:element name="idUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreUsuario" type="xs:string" />
+      <xs:element minOccurs="0" name="nombres" type="xs:string" />
+      <xs:element minOccurs="0" name="privilegio" type="xs:string" />
+      <xs:element minOccurs="0" name="rut" type="xs:string" />
+      <xs:element name="telefono" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getClienteByRut">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Rut" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getClienteByRutResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:clienteUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarClienteUsuarioDeshabilitado">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListarClienteUsuarioDeshabilitadoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:clienteUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

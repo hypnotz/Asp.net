@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Servicios/" targetNamespace="http://Servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ListarRegion" type="tns:ListarRegion" />
+  <xs:element name="ListarRegionResponse" type="tns:ListarRegionResponse" />
+  <xs:complexType name="ListarRegion">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListarRegionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:region" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="region">
+    <xs:sequence>
+      <xs:element name="idRegion" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreRegion" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

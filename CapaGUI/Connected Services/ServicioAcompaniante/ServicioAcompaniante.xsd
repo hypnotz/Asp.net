@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Servicios/" targetNamespace="http://Servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="insertarAcompaniante" type="tns:insertarAcompaniante" />
+  <xs:element name="insertarAcompanianteResponse" type="tns:insertarAcompanianteResponse" />
+  <xs:complexType name="insertarAcompaniante">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="rut" type="xs:string" />
+      <xs:element name="idReserva" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidos" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAcompanianteResponse">
+    <xs:sequence />
+  </xs:complexType>
+</xs:schema>

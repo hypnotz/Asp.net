@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Servicios/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ServicioCliente" targetNamespace="http://Servicios/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:13526/WebServiceArriendoTemporada/ServicioCliente?xsd=1" namespace="http://Servicios/" />
+    </xsd:schema>
+  </types>
+  <message name="ListarClienteUsuario">
+    <part name="parameters" element="tns:ListarClienteUsuario" />
+  </message>
+  <message name="ListarClienteUsuarioResponse">
+    <part name="parameters" element="tns:ListarClienteUsuarioResponse" />
+  </message>
+  <message name="ListarClienteUsuarioDeshabilitado">
+    <part name="parameters" element="tns:ListarClienteUsuarioDeshabilitado" />
+  </message>
+  <message name="ListarClienteUsuarioDeshabilitadoResponse">
+    <part name="parameters" element="tns:ListarClienteUsuarioDeshabilitadoResponse" />
+  </message>
+  <message name="loguearseByUsuario">
+    <part name="parameters" element="tns:loguearseByUsuario" />
+  </message>
+  <message name="loguearseByUsuarioResponse">
+    <part name="parameters" element="tns:loguearseByUsuarioResponse" />
+  </message>
+  <message name="updateUsuarioCliente">
+    <part name="parameters" element="tns:updateUsuarioCliente" />
+  </message>
+  <message name="updateUsuarioClienteResponse">
+    <part name="parameters" element="tns:updateUsuarioClienteResponse" />
+  </message>
+  <message name="getClienteById">
+    <part name="parameters" element="tns:getClienteById" />
+  </message>
+  <message name="getClienteByIdResponse">
+    <part name="parameters" element="tns:getClienteByIdResponse" />
+  </message>
+  <message name="ListarCliente">
+    <part name="parameters" element="tns:ListarCliente" />
+  </message>
+  <message name="ListarClienteResponse">
+    <part name="parameters" element="tns:ListarClienteResponse" />
+  </message>
+  <message name="getClienteByRut">
+    <part name="parameters" element="tns:getClienteByRut" />
+  </message>
+  <message name="getClienteByRutResponse">
+    <part name="parameters" element="tns:getClienteByRutResponse" />
+  </message>
+  <portType name="ServicioCliente">
+    <operation name="ListarClienteUsuario">
+      <input wsam:Action="http://Servicios/ServicioCliente/ListarClienteUsuarioRequest" message="tns:ListarClienteUsuario" />
+      <output wsam:Action="http://Servicios/ServicioCliente/ListarClienteUsuarioResponse" message="tns:ListarClienteUsuarioResponse" />
+    </operation>
+    <operation name="ListarClienteUsuarioDeshabilitado">
+      <input wsam:Action="http://Servicios/ServicioCliente/ListarClienteUsuarioDeshabilitadoRequest" message="tns:ListarClienteUsuarioDeshabilitado" />
+      <output wsam:Action="http://Servicios/ServicioCliente/ListarClienteUsuarioDeshabilitadoResponse" message="tns:ListarClienteUsuarioDeshabilitadoResponse" />
+    </operation>
+    <operation name="loguearseByUsuario">
+      <input wsam:Action="http://Servicios/ServicioCliente/loguearseByUsuarioRequest" message="tns:loguearseByUsuario" />
+      <output wsam:Action="http://Servicios/ServicioCliente/loguearseByUsuarioResponse" message="tns:loguearseByUsuarioResponse" />
+    </operation>
+    <operation name="updateUsuarioCliente">
+      <input wsam:Action="http://Servicios/ServicioCliente/updateUsuarioClienteRequest" message="tns:updateUsuarioCliente" />
+      <output wsam:Action="http://Servicios/ServicioCliente/updateUsuarioClienteResponse" message="tns:updateUsuarioClienteResponse" />
+    </operation>
+    <operation name="getClienteById">
+      <input wsam:Action="http://Servicios/ServicioCliente/getClienteByIdRequest" message="tns:getClienteById" />
+      <output wsam:Action="http://Servicios/ServicioCliente/getClienteByIdResponse" message="tns:getClienteByIdResponse" />
+    </operation>
+    <operation name="ListarCliente">
+      <input wsam:Action="http://Servicios/ServicioCliente/ListarClienteRequest" message="tns:ListarCliente" />
+      <output wsam:Action="http://Servicios/ServicioCliente/ListarClienteResponse" message="tns:ListarClienteResponse" />
+    </operation>
+    <operation name="getClienteByRut">
+      <input wsam:Action="http://Servicios/ServicioCliente/getClienteByRutRequest" message="tns:getClienteByRut" />
+      <output wsam:Action="http://Servicios/ServicioCliente/getClienteByRutResponse" message="tns:getClienteByRutResponse" />
+    </operation>
+  </portType>
+  <binding name="ServicioClientePortBinding" type="tns:ServicioCliente">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="ListarClienteUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListarClienteUsuarioDeshabilitado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="loguearseByUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateUsuarioCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getClienteById">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListarCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getClienteByRut">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ServicioCliente">
+    <port name="ServicioClientePort" binding="tns:ServicioClientePortBinding">
+      <soap:address location="http://localhost:13526/WebServiceArriendoTemporada/ServicioCliente" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Servicios/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ServicioDepartamento" targetNamespace="http://Servicios/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:13526/WebServiceArriendoTemporada/ServicioDepartamento?xsd=1" namespace="http://Servicios/" />
+    </xsd:schema>
+  </types>
+  <message name="ActualizarDepto">
+    <part name="parameters" element="tns:ActualizarDepto" />
+  </message>
+  <message name="ActualizarDeptoResponse">
+    <part name="parameters" element="tns:ActualizarDeptoResponse" />
+  </message>
+  <message name="CancelarRegistro">
+    <part name="parameters" element="tns:CancelarRegistro" />
+  </message>
+  <message name="CancelarRegistroResponse">
+    <part name="parameters" element="tns:CancelarRegistroResponse" />
+  </message>
+  <message name="EliminarDepto">
+    <part name="parameters" element="tns:EliminarDepto" />
+  </message>
+  <message name="EliminarDeptoResponse">
+    <part name="parameters" element="tns:EliminarDeptoResponse" />
+  </message>
+  <message name="IngresarDepto">
+    <part name="parameters" element="tns:IngresarDepto" />
+  </message>
+  <message name="IngresarDeptoResponse">
+    <part name="parameters" element="tns:IngresarDeptoResponse" />
+  </message>
+  <message name="ListarDepto">
+    <part name="parameters" element="tns:ListarDepto" />
+  </message>
+  <message name="ListarDeptoResponse">
+    <part name="parameters" element="tns:ListarDeptoResponse" />
+  </message>
+  <portType name="ServicioDepartamento">
+    <operation name="ActualizarDepto">
+      <input wsam:Action="http://Servicios/ServicioDepartamento/ActualizarDeptoRequest" message="tns:ActualizarDepto" />
+      <output wsam:Action="http://Servicios/ServicioDepartamento/ActualizarDeptoResponse" message="tns:ActualizarDeptoResponse" />
+    </operation>
+    <operation name="CancelarRegistro">
+      <input wsam:Action="http://Servicios/ServicioDepartamento/CancelarRegistroRequest" message="tns:CancelarRegistro" />
+      <output wsam:Action="http://Servicios/ServicioDepartamento/CancelarRegistroResponse" message="tns:CancelarRegistroResponse" />
+    </operation>
+    <operation name="EliminarDepto">
+      <input wsam:Action="http://Servicios/ServicioDepartamento/EliminarDeptoRequest" message="tns:EliminarDepto" />
+      <output wsam:Action="http://Servicios/ServicioDepartamento/EliminarDeptoResponse" message="tns:EliminarDeptoResponse" />
+    </operation>
+    <operation name="IngresarDepto">
+      <input wsam:Action="http://Servicios/ServicioDepartamento/IngresarDeptoRequest" message="tns:IngresarDepto" />
+      <output wsam:Action="http://Servicios/ServicioDepartamento/IngresarDeptoResponse" message="tns:IngresarDeptoResponse" />
+    </operation>
+    <operation name="ListarDepto">
+      <input wsam:Action="http://Servicios/ServicioDepartamento/ListarDeptoRequest" message="tns:ListarDepto" />
+      <output wsam:Action="http://Servicios/ServicioDepartamento/ListarDeptoResponse" message="tns:ListarDeptoResponse" />
+    </operation>
+  </portType>
+  <binding name="ServicioDepartamentoPortBinding" type="tns:ServicioDepartamento">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="ActualizarDepto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CancelarRegistro">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EliminarDepto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="IngresarDepto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListarDepto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ServicioDepartamento">
+    <port name="ServicioDepartamentoPort" binding="tns:ServicioDepartamentoPortBinding">
+      <soap:address location="http://localhost:13526/WebServiceArriendoTemporada/ServicioDepartamento" />
+    </port>
+  </service>
+</definitions>

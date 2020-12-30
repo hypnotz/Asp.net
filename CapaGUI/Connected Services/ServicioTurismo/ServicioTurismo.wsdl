@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Servicios/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ServicioTurismo" targetNamespace="http://Servicios/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:13526/WebServiceArriendoTemporada/ServicioTurismo?xsd=1" namespace="http://Servicios/" />
+    </xsd:schema>
+  </types>
+  <message name="ActualizarTurismo">
+    <part name="parameters" element="tns:ActualizarTurismo" />
+  </message>
+  <message name="ActualizarTurismoResponse">
+    <part name="parameters" element="tns:ActualizarTurismoResponse" />
+  </message>
+  <message name="eliminarTurismo">
+    <part name="parameters" element="tns:eliminarTurismo" />
+  </message>
+  <message name="eliminarTurismoResponse">
+    <part name="parameters" element="tns:eliminarTurismoResponse" />
+  </message>
+  <message name="listarTurismo">
+    <part name="parameters" element="tns:listarTurismo" />
+  </message>
+  <message name="listarTurismoResponse">
+    <part name="parameters" element="tns:listarTurismoResponse" />
+  </message>
+  <message name="IngresarTurismo">
+    <part name="parameters" element="tns:IngresarTurismo" />
+  </message>
+  <message name="IngresarTurismoResponse">
+    <part name="parameters" element="tns:IngresarTurismoResponse" />
+  </message>
+  <portType name="ServicioTurismo">
+    <operation name="ActualizarTurismo">
+      <input wsam:Action="http://Servicios/ServicioTurismo/ActualizarTurismoRequest" message="tns:ActualizarTurismo" />
+      <output wsam:Action="http://Servicios/ServicioTurismo/ActualizarTurismoResponse" message="tns:ActualizarTurismoResponse" />
+    </operation>
+    <operation name="eliminarTurismo">
+      <input wsam:Action="http://Servicios/ServicioTurismo/eliminarTurismoRequest" message="tns:eliminarTurismo" />
+      <output wsam:Action="http://Servicios/ServicioTurismo/eliminarTurismoResponse" message="tns:eliminarTurismoResponse" />
+    </operation>
+    <operation name="listarTurismo">
+      <input wsam:Action="http://Servicios/ServicioTurismo/listarTurismoRequest" message="tns:listarTurismo" />
+      <output wsam:Action="http://Servicios/ServicioTurismo/listarTurismoResponse" message="tns:listarTurismoResponse" />
+    </operation>
+    <operation name="IngresarTurismo">
+      <input wsam:Action="http://Servicios/ServicioTurismo/IngresarTurismoRequest" message="tns:IngresarTurismo" />
+      <output wsam:Action="http://Servicios/ServicioTurismo/IngresarTurismoResponse" message="tns:IngresarTurismoResponse" />
+    </operation>
+  </portType>
+  <binding name="ServicioTurismoPortBinding" type="tns:ServicioTurismo">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="ActualizarTurismo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarTurismo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTurismo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="IngresarTurismo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ServicioTurismo">
+    <port name="ServicioTurismoPort" binding="tns:ServicioTurismoPortBinding">
+      <soap:address location="http://localhost:13526/WebServiceArriendoTemporada/ServicioTurismo" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Servicios/" targetNamespace="http://Servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ActualizarTurismo" type="tns:ActualizarTurismo" />
+  <xs:element name="ActualizarTurismoResponse" type="tns:ActualizarTurismoResponse" />
+  <xs:element name="IngresarTurismo" type="tns:IngresarTurismo" />
+  <xs:element name="IngresarTurismoResponse" type="tns:IngresarTurismoResponse" />
+  <xs:element name="eliminarTurismo" type="tns:eliminarTurismo" />
+  <xs:element name="eliminarTurismoResponse" type="tns:eliminarTurismoResponse" />
+  <xs:element name="listarTurismo" type="tns:listarTurismo" />
+  <xs:element name="listarTurismoResponse" type="tns:listarTurismoResponse" />
+  <xs:complexType name="listarTurismo">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTurismoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:listaTurismo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listaTurismo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="disponibilidad" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha" type="xs:string" />
+      <xs:element name="idTurismo" type="xs:int" />
+      <xs:element name="precio" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IngresarTurismo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" type="xs:string" />
+      <xs:element name="Precio" type="xs:int" />
+      <xs:element name="Disponibilidad" type="xs:int" />
+      <xs:element minOccurs="0" name="V_FECHA" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IngresarTurismoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ActualizarTurismo">
+    <xs:sequence>
+      <xs:element name="v_ID_TURISMO" type="xs:int" />
+      <xs:element minOccurs="0" name="v_DESCRIPCION" type="xs:string" />
+      <xs:element name="v_PRECIO" type="xs:int" />
+      <xs:element name="v_ID_DISPONIBILIDAD" type="xs:int" />
+      <xs:element minOccurs="0" name="V_FECHA" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActualizarTurismoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="eliminarTurismo">
+    <xs:sequence>
+      <xs:element name="idTurismo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarTurismoResponse">
+    <xs:sequence />
+  </xs:complexType>
+</xs:schema>

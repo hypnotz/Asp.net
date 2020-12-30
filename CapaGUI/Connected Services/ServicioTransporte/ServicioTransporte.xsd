@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Servicios/" targetNamespace="http://Servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="IngresoTransporte" type="tns:IngresoTransporte" />
+  <xs:element name="IngresoTransporteResponse" type="tns:IngresoTransporteResponse" />
+  <xs:element name="actualizarTransporte" type="tns:actualizarTransporte" />
+  <xs:element name="actualizarTransporteResponse" type="tns:actualizarTransporteResponse" />
+  <xs:element name="eliminarTransporte" type="tns:eliminarTransporte" />
+  <xs:element name="eliminarTransporteResponse" type="tns:eliminarTransporteResponse" />
+  <xs:element name="insertReservaService" type="tns:insertReservaService" />
+  <xs:element name="insertReservaServiceResponse" type="tns:insertReservaServiceResponse" />
+  <xs:element name="listarTransporte" type="tns:listarTransporte" />
+  <xs:element name="listarTransporteResponse" type="tns:listarTransporteResponse" />
+  <xs:complexType name="actualizarTransporte">
+    <xs:sequence>
+      <xs:element name="v_ID_TRANSPORTE" type="xs:int" />
+      <xs:element name="v_PRECIO" type="xs:int" />
+      <xs:element name="v_ID_DISPONIBILIDAD" type="xs:int" />
+      <xs:element name="v_CAPACIDAD" type="xs:int" />
+      <xs:element minOccurs="0" name="V_DESCRIPCION" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarTransporteResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="eliminarTransporte">
+    <xs:sequence>
+      <xs:element name="idTransporte" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarTransporteResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="insertReservaService">
+    <xs:sequence>
+      <xs:element name="idTransporte" type="xs:int" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="horario" type="xs:string" />
+      <xs:element name="idReserva" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertReservaServiceResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="IngresoTransporte">
+    <xs:sequence>
+      <xs:element name="Precio" type="xs:int" />
+      <xs:element name="Disponbilidad" type="xs:int" />
+      <xs:element name="V_CAPACIDAD" type="xs:int" />
+      <xs:element minOccurs="0" name="V_DESCRIPCION" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IngresoTransporteResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTransporte">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTransporteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:listaTransporte" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listaTransporte">
+    <xs:sequence>
+      <xs:element name="capacidad" type="xs:int" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="disponibilidad" type="xs:string" />
+      <xs:element name="idTransporte" type="xs:int" />
+      <xs:element name="precio" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

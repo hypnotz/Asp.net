@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Servicios/" targetNamespace="http://Servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="GetAcompaniantesByReserva" type="tns:GetAcompaniantesByReserva" />
+  <xs:element name="GetAcompaniantesByReservaResponse" type="tns:GetAcompaniantesByReservaResponse" />
+  <xs:element name="GetTransporteByReserva" type="tns:GetTransporteByReserva" />
+  <xs:element name="GetTransporteByReservaResponse" type="tns:GetTransporteByReservaResponse" />
+  <xs:element name="GetTurismoByReserva" type="tns:GetTurismoByReserva" />
+  <xs:element name="GetTurismoByReservaResponse" type="tns:GetTurismoByReservaResponse" />
+  <xs:element name="consultaReservas" type="tns:consultaReservas" />
+  <xs:element name="consultaReservasOut" type="tns:consultaReservasOut" />
+  <xs:element name="consultaReservasOutResponse" type="tns:consultaReservasOutResponse" />
+  <xs:element name="consultaReservasResponse" type="tns:consultaReservasResponse" />
+  <xs:element name="insertReserva" type="tns:insertReserva" />
+  <xs:element name="insertReservaResponse" type="tns:insertReservaResponse" />
+  <xs:element name="listarReserva" type="tns:listarReserva" />
+  <xs:element name="listarReservaResponse" type="tns:listarReservaResponse" />
+  <xs:element name="reservaUsuario2" type="tns:reservaUsuario2" />
+  <xs:element name="reservaUsuario2Response" type="tns:reservaUsuario2Response" />
+  <xs:element name="validarFechaReserva" type="tns:validarFechaReserva" />
+  <xs:element name="validarFechaReservaResponse" type="tns:validarFechaReservaResponse" />
+  <xs:complexType name="listarReserva">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarReservaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:reservaDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reservaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fecha" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaInicio" type="xs:string" />
+      <xs:element name="idCliente" type="xs:int" />
+      <xs:element name="idDpto" type="xs:int" />
+      <xs:element name="idReserva" type="xs:int" />
+      <xs:element name="pago" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consultaReservas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idDepto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consultaReservasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:reserva" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reserva">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fecha" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha_fin" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha_inicio" type="xs:string" />
+      <xs:element name="id_cliente" type="xs:int" />
+      <xs:element name="id_departamento" type="xs:int" />
+      <xs:element name="id_reserva" type="xs:int" />
+      <xs:element name="pago" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="validarFechaReserva">
+    <xs:sequence>
+      <xs:element name="idDepto" type="xs:int" />
+      <xs:element minOccurs="0" name="fecha_inicio" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha_fin" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="validarFechaReservaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetAcompaniantesByReserva">
+    <xs:sequence>
+      <xs:element name="idReserva" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetAcompaniantesByReservaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:acompanianteReserva" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="acompanianteReserva">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertReserva">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechaInicio" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:string" />
+      <xs:element name="pago" type="xs:int" />
+      <xs:element name="idDpto" type="xs:int" />
+      <xs:element name="idCliente" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertReservaResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="GetTurismoByReserva">
+    <xs:sequence>
+      <xs:element name="idReserva" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetTurismoByReservaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:servicioReservaList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="servicioReservaList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reservaUsuario2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombreUsuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reservaUsuario2Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:reservaUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reservaUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="depto" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaInicio" type="xs:string" />
+      <xs:element name="idReserva" type="xs:int" />
+      <xs:element name="pago" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetTransporteByReserva">
+    <xs:sequence>
+      <xs:element name="idReserva" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetTransporteByReservaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:servicioReservaList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consultaReservasOut">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="consultaReservasOutResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:reserva" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,23 @@
+﻿html, body {
+    padding-top: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contenedor-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnIniciar {
+    margin-top: 20px;
+}
+
+.container-cr {
+    display: flex;
+}

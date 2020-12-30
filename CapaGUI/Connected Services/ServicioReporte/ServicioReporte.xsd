@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Servicios/" targetNamespace="http://Servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="getReporteGanancia" type="tns:getReporteGanancia" />
+  <xs:element name="getReporteGananciaMensual" type="tns:getReporteGananciaMensual" />
+  <xs:element name="getReporteGananciaMensualResponse" type="tns:getReporteGananciaMensualResponse" />
+  <xs:element name="getReporteGananciaResponse" type="tns:getReporteGananciaResponse" />
+  <xs:element name="getReporteM" type="tns:getReporteM" />
+  <xs:element name="getReporteMResponse" type="tns:getReporteMResponse" />
+  <xs:element name="reporteGananciaDiaria" type="tns:reporteGananciaDiaria" />
+  <xs:element name="reporteGananciaDiariaResponse" type="tns:reporteGananciaDiariaResponse" />
+  <xs:element name="reporteGananciaDiariaZona" type="tns:reporteGananciaDiariaZona" />
+  <xs:element name="reporteGananciaDiariaZonaResponse" type="tns:reporteGananciaDiariaZonaResponse" />
+  <xs:element name="reporteGananciaMensualZona" type="tns:reporteGananciaMensualZona" />
+  <xs:element name="reporteGananciaMensualZonaResponse" type="tns:reporteGananciaMensualZonaResponse" />
+  <xs:element name="reporteGananciaZona" type="tns:reporteGananciaZona" />
+  <xs:element name="reporteGananciaZonaResponse" type="tns:reporteGananciaZonaResponse" />
+  <xs:complexType name="reporteGananciaZona">
+    <xs:sequence>
+      <xs:element name="intAno" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reporteGananciaZonaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:reporteZona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reporteZona">
+    <xs:sequence>
+      <xs:element name="ganancia" type="xs:int" />
+      <xs:element minOccurs="0" name="region" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getReporteGananciaMensual">
+    <xs:sequence>
+      <xs:element name="intMes" type="xs:int" />
+      <xs:element name="intAno" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getReporteGananciaMensualResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:reporteGanancia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reporteGanancia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element name="ganancia" type="xs:int" />
+      <xs:element name="idDepto" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reporteGananciaDiariaZona">
+    <xs:sequence>
+      <xs:element name="intDia" type="xs:int" />
+      <xs:element name="intMes" type="xs:int" />
+      <xs:element name="intAno" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reporteGananciaDiariaZonaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:reporteZona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getReporteM">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getReporteMResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:reporteMensualReservas" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reporteMensualReservas">
+    <xs:sequence>
+      <xs:element name="arriendos" type="xs:int" />
+      <xs:element minOccurs="0" name="mes" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reporteGananciaDiaria">
+    <xs:sequence>
+      <xs:element name="intDia" type="xs:int" />
+      <xs:element name="intMes" type="xs:int" />
+      <xs:element name="intAno" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reporteGananciaDiariaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:reporteGanancia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getReporteGanancia">
+    <xs:sequence>
+      <xs:element name="intAno" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getReporteGananciaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:reporteGanancia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reporteGananciaMensualZona">
+    <xs:sequence>
+      <xs:element name="intMes" type="xs:int" />
+      <xs:element name="intAno" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reporteGananciaMensualZonaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:reporteZona" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

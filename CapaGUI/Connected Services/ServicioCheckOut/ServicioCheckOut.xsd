@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Servicios/" targetNamespace="http://Servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="getLastID" type="tns:getLastID" />
+  <xs:element name="getLastIDResponse" type="tns:getLastIDResponse" />
+  <xs:element name="insertarCheckOut" type="tns:insertarCheckOut" />
+  <xs:element name="insertarCheckOutMulta" type="tns:insertarCheckOutMulta" />
+  <xs:element name="insertarCheckOutMulta2" type="tns:insertarCheckOutMulta2" />
+  <xs:element name="insertarCheckOutMulta2Response" type="tns:insertarCheckOutMulta2Response" />
+  <xs:element name="insertarCheckOutMultaResponse" type="tns:insertarCheckOutMultaResponse" />
+  <xs:element name="insertarCheckOutResponse" type="tns:insertarCheckOutResponse" />
+  <xs:element name="insertarDetalleMulta" type="tns:insertarDetalleMulta" />
+  <xs:element name="insertarDetalleMultaResponse" type="tns:insertarDetalleMultaResponse" />
+  <xs:complexType name="insertarCheckOutMulta2">
+    <xs:sequence>
+      <xs:element name="V_TOTAL_MULTA" type="xs:int" />
+      <xs:element name="V_ID_CHECK_OUT" type="xs:int" />
+      <xs:element name="V_ID_CHECK_IN" type="xs:int" />
+      <xs:element minOccurs="0" name="V_FECHA" type="xs:string" />
+      <xs:element name="V_ID_RECURSOS" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCheckOutMulta2Response">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getLastID">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getLastIDResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCheckOut">
+    <xs:sequence>
+      <xs:element name="idCheckIn" type="xs:int" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:string" />
+      <xs:element name="idRecursoHumano" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCheckOutResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="insertarCheckOutMulta">
+    <xs:sequence>
+      <xs:element name="V_TOTAL_MULTA" type="xs:int" />
+      <xs:element name="V_ID_CHECK_OUT" type="xs:int" />
+      <xs:element name="V_ID_CHECK_IN" type="xs:int" />
+      <xs:element minOccurs="0" name="V_FECHA" type="xs:string" />
+      <xs:element name="V_ID_RECURSOS" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCheckOutMultaResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="insertarDetalleMulta">
+    <xs:sequence>
+      <xs:element name="V_TOTAL_MULTA" type="xs:int" />
+      <xs:element minOccurs="0" name="V_DESCRIPCION" type="xs:string" />
+      <xs:element name="V_ID_MAXMULTA" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarDetalleMultaResponse">
+    <xs:sequence />
+  </xs:complexType>
+</xs:schema>

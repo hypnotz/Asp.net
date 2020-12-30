@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Servicios/" targetNamespace="http://Servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ActualizarDepto" type="tns:ActualizarDepto" />
+  <xs:element name="ActualizarDeptoResponse" type="tns:ActualizarDeptoResponse" />
+  <xs:element name="CancelarRegistro" type="tns:CancelarRegistro" />
+  <xs:element name="CancelarRegistroResponse" type="tns:CancelarRegistroResponse" />
+  <xs:element name="EliminarDepto" type="tns:EliminarDepto" />
+  <xs:element name="EliminarDeptoResponse" type="tns:EliminarDeptoResponse" />
+  <xs:element name="IngresarDepto" type="tns:IngresarDepto" />
+  <xs:element name="IngresarDeptoResponse" type="tns:IngresarDeptoResponse" />
+  <xs:element name="ListarDepto" type="tns:ListarDepto" />
+  <xs:element name="ListarDeptoResponse" type="tns:ListarDeptoResponse" />
+  <xs:complexType name="EliminarDepto">
+    <xs:sequence>
+      <xs:element name="idDepto" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarDeptoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ActualizarDepto">
+    <xs:sequence>
+      <xs:element name="idDepto" type="xs:int" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element name="cantidadPiezas" type="xs:int" />
+      <xs:element name="cantidadBanos" type="xs:int" />
+      <xs:element minOccurs="0" name="condiciones" type="xs:string" />
+      <xs:element name="idTipoEstado" type="xs:int" />
+      <xs:element name="idComuna" type="xs:int" />
+      <xs:element name="idTarifa" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActualizarDeptoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="CancelarRegistro">
+    <xs:sequence>
+      <xs:element name="idReserva" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CancelarRegistroResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarDepto">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListarDeptoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:listaDepto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listaDepto">
+    <xs:sequence>
+      <xs:element name="cantidadBanos" type="xs:int" />
+      <xs:element name="cantidadPiezas" type="xs:int" />
+      <xs:element minOccurs="0" name="comuna" type="xs:string" />
+      <xs:element minOccurs="0" name="condiciones" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element name="idDepartamento" type="xs:int" />
+      <xs:element name="idEstado" type="xs:int" />
+      <xs:element minOccurs="0" name="image" type="xs:base64Binary" />
+      <xs:element name="tarifa" type="xs:int" />
+      <xs:element minOccurs="0" name="tipoEstado" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IngresarDepto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element name="cantidadPiezas" type="xs:int" />
+      <xs:element name="cantidadBanos" type="xs:int" />
+      <xs:element minOccurs="0" name="condiciones" type="xs:string" />
+      <xs:element name="idTipoEstado" type="xs:int" />
+      <xs:element name="idComuna" type="xs:int" />
+      <xs:element name="idTarifa" type="xs:int" />
+      <xs:element minOccurs="0" name="V_PATH" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IngresarDeptoResponse">
+    <xs:sequence />
+  </xs:complexType>
+</xs:schema>

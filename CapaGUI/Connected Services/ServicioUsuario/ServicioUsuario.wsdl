@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Servicios/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ServicioUsuario" targetNamespace="http://Servicios/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:13526/WebServiceArriendoTemporada/ServicioUsuario?xsd=1" namespace="http://Servicios/" />
+    </xsd:schema>
+  </types>
+  <message name="ActualizarUsuario">
+    <part name="parameters" element="tns:ActualizarUsuario" />
+  </message>
+  <message name="ActualizarUsuarioResponse">
+    <part name="parameters" element="tns:ActualizarUsuarioResponse" />
+  </message>
+  <message name="EliminarClienteUsuario">
+    <part name="parameters" element="tns:EliminarClienteUsuario" />
+  </message>
+  <message name="EliminarClienteUsuarioResponse">
+    <part name="parameters" element="tns:EliminarClienteUsuarioResponse" />
+  </message>
+  <message name="autenticarUsuario">
+    <part name="parameters" element="tns:autenticarUsuario" />
+  </message>
+  <message name="autenticarUsuarioResponse">
+    <part name="parameters" element="tns:autenticarUsuarioResponse" />
+  </message>
+  <message name="ingresarUsuario2">
+    <part name="parameters" element="tns:ingresarUsuario2" />
+  </message>
+  <message name="ingresarUsuario2Response">
+    <part name="parameters" element="tns:ingresarUsuario2Response" />
+  </message>
+  <message name="ingresarUsuario">
+    <part name="parameters" element="tns:ingresarUsuario" />
+  </message>
+  <message name="ingresarUsuarioResponse">
+    <part name="parameters" element="tns:ingresarUsuarioResponse" />
+  </message>
+  <portType name="ServicioUsuario">
+    <operation name="ActualizarUsuario">
+      <input wsam:Action="http://Servicios/ServicioUsuario/ActualizarUsuarioRequest" message="tns:ActualizarUsuario" />
+      <output wsam:Action="http://Servicios/ServicioUsuario/ActualizarUsuarioResponse" message="tns:ActualizarUsuarioResponse" />
+    </operation>
+    <operation name="EliminarClienteUsuario">
+      <input wsam:Action="http://Servicios/ServicioUsuario/EliminarClienteUsuarioRequest" message="tns:EliminarClienteUsuario" />
+      <output wsam:Action="http://Servicios/ServicioUsuario/EliminarClienteUsuarioResponse" message="tns:EliminarClienteUsuarioResponse" />
+    </operation>
+    <operation name="autenticarUsuario">
+      <input wsam:Action="http://Servicios/ServicioUsuario/autenticarUsuarioRequest" message="tns:autenticarUsuario" />
+      <output wsam:Action="http://Servicios/ServicioUsuario/autenticarUsuarioResponse" message="tns:autenticarUsuarioResponse" />
+    </operation>
+    <operation name="ingresarUsuario2">
+      <input wsam:Action="http://Servicios/ServicioUsuario/ingresarUsuario2Request" message="tns:ingresarUsuario2" />
+      <output wsam:Action="http://Servicios/ServicioUsuario/ingresarUsuario2Response" message="tns:ingresarUsuario2Response" />
+    </operation>
+    <operation name="ingresarUsuario">
+      <input wsam:Action="http://Servicios/ServicioUsuario/ingresarUsuarioRequest" message="tns:ingresarUsuario" />
+      <output wsam:Action="http://Servicios/ServicioUsuario/ingresarUsuarioResponse" message="tns:ingresarUsuarioResponse" />
+    </operation>
+  </portType>
+  <binding name="ServicioUsuarioPortBinding" type="tns:ServicioUsuario">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="ActualizarUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EliminarClienteUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="autenticarUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ingresarUsuario2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ingresarUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ServicioUsuario">
+    <port name="ServicioUsuarioPort" binding="tns:ServicioUsuarioPortBinding">
+      <soap:address location="http://localhost:13526/WebServiceArriendoTemporada/ServicioUsuario" />
+    </port>
+  </service>
+</definitions>

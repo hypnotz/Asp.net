@@ -1,0 +1,26 @@
+﻿body {
+}
+
+.contenedor-btn-cr{
+    display : flex;
+}
+
+.image-cr{
+    width : 100px;
+    height : 100px;
+    margin-left  : 40px;
+    cursor : pointer;
+}
+
+.cr-btn-add{
+    display : flex;
+    justify-content : space-evenly;
+}
+
+.btnBorrar{
+    background-color: red;
+}
+
+.btnBorrar:hover{
+    background-color : red;
+}
